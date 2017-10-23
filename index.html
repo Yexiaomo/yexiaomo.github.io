@@ -1,241 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>繁星晓默</title>
+  <meta name="author" content="fxb1788@163.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- 
+    本段js代码仅仅是为了检测浏览器是否影响页面效果
+    不必理会
+  -->
+  <script type="text/javascript">  
+    var userAgent = navigator.userAgent,   
+    rMsie = /(msie\s|trident.*rv:)([\w.]+)/;
+    var ua = userAgent.toLowerCase();  
+    function uaMatch(ua) {  
+        var match = rMsie.exec(ua);  
+        if (match != null) {  
+            return { browser : "IE", version : match[2] || "0" };  
+        }   
+        if (match != null) {  
+            return { browser : "", version : "0" };  
+        }  
+    }  
+    var browserMatch = uaMatch(userAgent.toLowerCase());  
+    if (browserMatch.browser) {  
+      var version = browserMatch.version;
+      if(version<=8){
+        alert("温馨提示：您的浏览器版本过低，请下载最新谷歌、火狐等浏览器的最新版本！");
+        window.opener=null;
+        window.open('','_self');
+        window.close();
+      }
+    }  
+  </script>
+  <!--这里为了触发bootstrap的响应式导航,需要要调用一下 bootstrap的 JS脚本-->
+  <!--具体效果可以将浏览器窗口缩小,观察导航栏的变化-->
+  <!--两个JS顺序不能错-->
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   
-  <title>Xiaomo-blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Xiaomo-blog">
-<meta property="og:url" content="http://www.fanxiaobo.cn/blog/index.html">
-<meta property="og:site_name" content="Xiaomo-blog">
-<meta property="og:locale" content="zh">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xiaomo-blog">
-  
-    <link rel="alternate" href="/atom.xml" title="Xiaomo-blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
-  
-
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/blog/" id="logo">Xiaomo-blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">Your choices determine your life</a>
-        </h2>
-      
+
+  <!--Navigation(导航)-->
+  <!--添加 bootstrap 类-->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+      <div class="navbar-header">
+        <button type="button" class="nav navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span><!--切换导航-->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand topnav" href="https://github.com/Yexiaomo" target="_blank">繁星晓默</a>
+      </div>
+      <!--我自己的导航链接-->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#profile">PROFILE</a></li>
+          <li><a href="#club">CLUB</a></li>
+          <li><a href="#myclass">MYCLASS</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/blog/">Home</a>
-        
-          <a class="main-nav-link" href="/blog/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.fanxiaobo.cn/blog"></form>
+    <!-- /.container -->
+  </nav>
+
+
+  <!-- home -->
+  <a name="home"></a>
+  <div class="intro-header">
+    <div class="bg-overlay">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="intro-message">
+
+              <h1>Imcainiao</h1>
+              <h3>Endure loneliness</h3>
+              <hr class="intro-divider">
+              <ul class="list-inline intro-social-buttons">
+                <li>
+                  <a href="http://codepen.io/Yexiaomo/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-codepen fa-fw"></i><span class="network-name">CodePen</span></a>
+                </li>
+                <li>
+                  <a href="https://github.com/Yexiaomo" target="_blank" class="btn btn-default btn-lg "><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                  <a href="http://blog.csdn.net/qq_32603745" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-csdn fa-fw"></i> <span class="network-name">Blog</span></a>
+                </li>
+                <li>
+                  <a href="https://www.freecodecamp.cn/yexiaomo" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-fire fa-fw"></i> <span class="network-name">freeCodeCamp</span></a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+  </div>
+  <!-- /.intro-header -->
+
+  <!-- Page Content (页面) -->
+  <a name="profile"></a>
+  <div class="content-section-a">
+    <div class="bg-overlay2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-6">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Personal Skills</h2>
+            <br/>
+            <p class="lead">I'm<a href="https://www.freecodecamp.cn/yexiaomo">Yexiaomo</a><br/>
+                I am a rookie 15 software engineering
+                Master degree of professional courses:<br/>
+                English:60%<br/>
+                C: 4%<br/>
+                C#: 1.2%<br/>
+                Java: 2.3%<br/>
+                HTML&HTML5: 30%<br/>
+                CSS&CSS3: 20% <br/>
+                JavaScript: 5.5%<br/>
+                liunx: 1%<br/>
+                MySQL: 1.1%<br/>
+                SQLServer:0.5%<br/>
+                datastruct&algorithm:1.5%<br/>
+                <p>Never underestimate your power to change yourself<br/>
+            </p>
+          </div>
+          <div class="col-lg-5 col-lg-offset-2 col-sm-6 collapse navbar-collapse">
+            <img id="cat_p" class="img-circle img-responsive" src="images/cat.jpg" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/10/23/hello-hexo/" class="article-date">
-  <time datetime="2017-10-23T06:38:34.000Z" itemprop="datePublished">2017-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/10/23/hello-hexo/">hello-hexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.fanxiaobo.cn/blog/2017/10/23/hello-hexo/" data-id="cj93wa7ps00000a0ykiq6dv6p" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/My-First-Hexo-Page/">My First Hexo Page</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/10/23/hello-world/" class="article-date">
-  <time datetime="2017-10-23T06:12:32.331Z" itemprop="datePublished">2017-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2017/10/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.fanxiaobo.cn/blog/2017/10/23/hello-world/" data-id="cj93wa7q200010a0yuv0knlw1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/My-First-Hexo-Page/">My First Hexo Page</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/blog/tags/My-First-Hexo-Page/" style="font-size: 10px;">My First Hexo Page</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/blog/2017/10/23/hello-hexo/">hello-hexo</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/10/23/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+  <!-- Club -->
+  <a  name="club"></a>
+    <div class="club-bg-img">
+      <div class="bg-overlay">
+        <div class="container">         
+            <div class="row">      
+                <div class="col-lg-12">
+                  <div class="intro-message">
+                        <h1 style="text-align:center">C l u b</h1>
+                        <h2 style="text-align:center">Where Awesomeness Is Brought To Life.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Yexiaomo<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
-</footer>
+
+  <!-- myclass -->
+  <a  name="myclass"></a>
+    <div class="banner">
+      <div class="bg-overlay4">
+        <div class="container">         
+            <div class="row">
+                <div class="col-lg-12">
+                  <h2 style="text-align: center;">I love My Class, because she gives me happiness, warm of home</h2>
+                </div>
+              </br>
+            </div>
+        </div>
+        <!-- /.container -->
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/blog/" class="mobile-nav-link">Home</a>
-  
-    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/blog/js/script.js"></script>
-
-  </div>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li class="footer-menu-divider">&sdot;</li>
+            <li>
+                <a href="#profile">Profile</a>
+            </li> 
+            <li class="footer-menu-divider">&sdot;</li>
+            <li>
+                <a href="#club">Club</a>
+            </li>
+            <li class="footer-menu-divider">&sdot;</li>
+            <li>
+                <a href="#myclass">MyClass</a>
+            </li>
+          </ul>
+          <p>Written and code by <a href="https://www.freecodecamp.cn/yexiaomo" target="_blank">Yexiaomo</a><br/>
+          <a href="mailto:fxb1788@163.com">e-mail: fxb1788@163.com</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
