@@ -1,0 +1,18 @@
+body{
+}
+.mainDiv404{
+    display: block;
+    margin: 0 auto;
+    width: 626px;
+}
+.imgDiv404{
+    float: left;
+    height: 437px;
+    width: 480px;
+    margin-top: 25px;
+}
+.linkDiv404{
+    float: right;
+    line-height: 437px;
+    width: 120px;
+}
