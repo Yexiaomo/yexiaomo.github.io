@@ -6,7 +6,7 @@ public class Graduate extends Student{
 
     public Graduate() {
     }
-
+    
     public Graduate(String name, String stuID, String sex, String birthday, String grade, String major, int stuCredit, String tutor, String researchDirection) {
         super(name, stuID, sex, birthday, grade, major, stuCredit);
         this.tutor = tutor;
