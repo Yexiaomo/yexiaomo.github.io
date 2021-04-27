@@ -1,4 +1,4 @@
-# [我的个人网站代码](http://www.fanxiaobo.cn)
+# [我的个人网站代码](https://yexiaomo.github.io)
 ### 增加自定义404页面(仅错误的静态html页面)
 - 写好404页面并上传至Nginx指定网站的根目录下(我的是/var/www/html/)
 - 打开nginx的配置文件(/etc/nginx/nginx.conf),在http定义域内添加代码 `fastcgi_intercept_errors on;`
